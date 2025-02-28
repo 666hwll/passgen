@@ -1,7 +1,7 @@
 
 build:
 	
-	clang -o passgen passwordgenerator.c
+	clang++ -o passgen passwordgenerator.cpp
 
 clean:
 	rm passgen

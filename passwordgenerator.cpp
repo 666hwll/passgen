@@ -7,22 +7,11 @@
 unsigned int choice;
 
 int secrets (size_t x) {
-    ranD:
-    getrandom(&choice, sizeof(choice),  0);
-    choice = choice %  x;
-
-    if (choice < 0) { 
-    goto ranD;
-    }
-   /*int fd = open("/dev/urandom", O_RDONLY);
-   if (fd == -1) {
-       perror("open");
-       return 1;
-   }
-
-   read(fd, &choice, sizeof(choice));
-   choice = choice % 110;
-   close(fd);*/
+    do {
+        getrandom(&choice, sizeof(choice),  0);
+        choice = choice %  x;
+    } while(choice < 0); 
+   
    return 0;
 }
 
