@@ -22,11 +22,9 @@ int secrets (size_t x) {
 int main() {
     unsigned int leni;
     std::string end = "";
-    const std::string asym = "^1jkl˝^<2ASDFGHJKL3{[]}qwertzu4P5)
-=?iop6IO+@~ a7ERTZUsdfg8*QWhyx9cvbnm,0°!§$&/(.-<YXCVBNM;:_|" ;
+    const std::string asym = "^1jkl˝^<2ASDFGHJKL3{[]}qwertzu4P5)=?iop6IO+@~ a7ERTZUsdfg8*QWhyx9cvbnm,0°!§$&/(.-<YXCVBNM;:_|" ;
     const size_t n = sizeof(asym)/sizeof(asym[0]);
-    std::cout << "Type in the length of the password you want to
- be generated(X to quit): ";
+    std::cout << "Type in the length of the password you want to be generated(X to quit): ";
     //std::cin >> leni;
     if (!(std::cin >> leni)) {
         std::cerr << "Input isn't expected format.\n";
@@ -36,8 +34,7 @@ int main() {
 
    for (int len = leni; len > 0; len--) {
        secrets(n);
-       strb[len-1] = asym[choice]; // Use choice as an index to
-access the asym array
+       strb[len-1] = asym[choice]; // Use choice as an index to access the asym array
    }
    std::cout << strb << "\n";
    //printf("%s\n", strb);
