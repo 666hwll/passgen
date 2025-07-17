@@ -8,7 +8,7 @@
 
 
 // struct
-unsigned int choice;
+unsigned int choice = 1;
 
 int secrets (size_t x) {
     do {
@@ -20,7 +20,7 @@ int secrets (size_t x) {
 }
 
 int main() {
-    unsigned int leni;
+    unsigned int leni = 1;
     std::string end = "";
     const std::string asym = "^1jkl˝^<2ASDFGHJKL3{[]}qwertzu4P5)=?iop6IO+@~ a7ERTZUsdfg8*QWhyx9cvbnm,0°!§$&/(.-<YXCVBNM;:_|" ;
     const size_t n = sizeof(asym)/sizeof(asym[0]);
